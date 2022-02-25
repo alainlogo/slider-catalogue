@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    position: relative;
+    height: 100%;
+}
+body {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    position: fixed;
+    display:flex ;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.logo{
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+ul{
+    display: flex;
+    margin-right: 30px;
+}
+li{
+    padding: 15px;
+}
+li a{
+    color: white;
+    font-size: 25px;
+}
+.contact{
+    width: 50%;
+    height: 130px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+    transition: 0.3s;
+}
+
+.la_video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contact_text{
+    position: absolute;
+    z-index: 100;
+    padding: 45px;
+    transition: 0.3s;
+}
+.contact_text a{
+    font-size: 35px;
+    color: white;
+    text-transform: uppercase;
+}
+.contact:hover .contact_text{
+    transform: translateX(20px);
+}
+.contact_text i{
+    color: white;
+    margin: 10px;
+    font-size: 30px;
+}
+
+.prese{
+    position: fixed;
+    height: 100vh;
+    width: 50%;
+    top: 0;
+    left: 0;
+    /* background-color: rgb(30, 153, 197); */
+    z-index: 2;
+    cursor: none;
+
+}
+.prese_box{
+    margin-left: 50px;
+    margin-top: 100px;
+    margin-right: 50px;
+    text-align: center;
+}
+.prese h1 span{
+    font-size: 85px;
+}
+h1 {
+    /* margin: 0; */
+    padding: 5px;
+    text-align: center;
+    overflow: hidden;
+    /* line-height: 1; */
+  }
+  h1 span {
+    display: block;
+    animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+  }
+  
+  @keyframes reveal {
+    0% {
+      transform: translate(0,100%);
+    }
+    100% {
+      transform: translate(0,0);
+    }
+}
+
+
+.prese p{
+    font-size: 22px;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+.prese_img{
+    position: absolute;
+    width: 55%;
+    bottom: 0;
+    left: 20%;
+
+}
+
+section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+section .cercle_text{
+    position: absolute;
+    color: black;
+    font-size: 1.5em;
+    font-weight: 900;
+    user-select: none;
+    pointer-events: none;
+    animation: animate 8s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+section .cercle_text span{
+    position: absolute;
+    top: -100px;
+    text-transform: uppercase;
+    display: inline-block;
+    transform-origin: 0 100px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+
+    /* centrer verticalment letext du slider */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.sections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sec1,
+.sec2,
+.sec3,
+.sec4,
+.sec5,
+.sec6,
+.sec7,
+.sec8,
+.sec9 {
+    width: 100%;
+    height: 100vh;
+    padding: 0 80px;
+}
+
+.section_container {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .beats {
+    background-color: #fff;
+} */
+.sec1{
+    background-color: rgb(127, 190, 201);
+}
+.sec2{
+    background-color: rgb(230, 203, 145);
+}
+.sec3 {
+    background-color: #92ddff;
+}
+
+.sec4 {
+    background-color: rgb(211, 91, 91);
+}
+.sec5 {
+    background-color: rgb(211, 119, 91);
+}
+.sec6 {
+    background-color: rgb(230, 203, 145);
+}
+.sec7 {
+    background-color: rgb(91, 211, 165);
+}
+.sec8 {
+    background-color: white;
+}
+.sec9 {
+    background-color: rgb(216, 232, 233);
+}
+
+
+.image {
+    width: 500px;
+    position: absolute;
+    top:25%;
+    left: 36%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    animation: MoveUpDown 3s linear infinite; 
+}
+@keyframes MoveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+}
+.image > img {
+    width: 100%;
+    z-index: 10;
+}
+
+.text {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    text-align: left;
+    background-color: #eee;
+
+}
+
+.text > .title {
+    font-size: 82px; 
+    font-weight: 100;
+    margin-bottom: 50px;
+}
+
+.sec1 > .section_container > .text {
+    color: #fff;
+}
+
+.text > .description {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.beats > .section_container > .image {
+    order: 2;
+    width: 500px;
+}
+
+.beats > .text {
+    color: #000;
+}
+
+
+.swiper-container-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite, 
+.swiper-container-vertical>.swiper-pagination-progressbar {
+    position: absolute;
+    left: 95%;
+    top: 25%;
+    height: 50%;
+}
+
+
+
+
+
+
+
+.sec1 .text{
+    background-image: url(../img/floral.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec2 .text{
+    background-image: url(../img/oiseau.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec3 .text{
+    background-image: url(../img/tie.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec4 .text{
+    background-image: url(../img/voyage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec5 .text{
+    background-image: url(../img/mykonos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec6 .text{
+    background-image: url(../img/papillons.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec7 .text{
+    background-image: url(../img/fleurdes.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec8 .text{
+    background-image: url(../img/70.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sec9 .text{
+    background-image: url(../img/toile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.text_box{
+    padding-left: 230px;
+    padding-right: 50px;
+    padding-top: 200px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.text_box h3{
+    font-size: 70px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+.text_box h3 span{
+    font-size: 25px;
+}
+.text_box .desc{
+    font-size: 22px;
+    margin-bottom: 40px;
+    font-family: unset;
+
+
+}
+.text_box .label{
+    font-size: 35px;
+}
+.text_box .produits{
+    font-size: 20px;
+    margin-bottom: 100px;
+    font-family: unset;
+
+}
+.text_box a{
+    padding: 30px 50px;
+    background-color: white;
+    font-size: 30px;
+    color: black;
+}
+
+
+
+
+/* SOURIS */
+/* .inner-cursor{
+    position: fixed;
+    left: 50px;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width 0.5s, height 0.5s;
+    z-index: 1000;
+}
+
+.inner-cursor.grow{
+    width: 50px;
+    height: 50px;
+    transition: width 0.5s, height 0.5s;
+} 
+
+.outer-cursor{
+    position: fixed;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 0.2s;
+    z-index: 1000;
+
+} */
+
